@@ -7,6 +7,8 @@ import { SidebarNav } from "@/app/(dashboard)/dashboard/settings/components/side
 import { SiteHeader } from "../components/site-header"
 import LoadingFullFrame from "../components/LoadingFullFrame"
 import { Suspense } from "react"
+import Footer from "../components/Footer"
+
 
 export const metadata: Metadata = {
   title: "Forms",
@@ -47,7 +49,7 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
       <SidebarNav items={sidebarNavItems} /> 
       <div className="flex h-[100vh] w-full flex-col">
       <SiteHeader />
-        <div className="space-y-6 p-10 pb-16  overflow-y-auto">
+        <div className="space-y-6 p-10 pb-16 h-full overflow-y-auto">
         <div className="space-y-0.5">
         </div>
         
@@ -58,6 +60,7 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
           <div className="flex-1 lg:max-w-2xl">{children}</div>
         </div>
         </div>
+        <Footer />
       </div>
       </Suspense>
     </div>
