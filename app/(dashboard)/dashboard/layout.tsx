@@ -14,6 +14,7 @@ import Link from "next/link"
 import { DashboardSidebarNav } from "./components/sidebar-nav"
 import { Suspense } from "react"
 import  LoadingFullFrame  from "@/app/(dashboard)/dashboard/components/LoadingFullFrame"
+import Footer from "./components/Footer"
 
 
 
@@ -40,8 +41,8 @@ export default function DashboardLayout({
                 
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Suspense fallback={<LoadingFullFrame />}>
-            <div className="flex flex-col ">
-              <div className="flex h-full">
+            <div className="flex h-[100vh] w-full flex-col">
+              <div className="flex">
 
                   <DashboardSidebarNav items={dashboardConfig.sidebarNav} bottomitems={dashboardConfig.sidebarBottomNav}  />
                   
@@ -53,6 +54,7 @@ export default function DashboardLayout({
                   
                 </main>
               </div>
+              
             </div>
             </Suspense>
           </ThemeProvider>

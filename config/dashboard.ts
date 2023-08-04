@@ -25,21 +25,21 @@ export const dashboardConfig: DashboardConfig = {
       icon: "projects",
     },
     {
-      title: "Settings",
-      href: "/dashboard/settings",
-      icon: "settings",
+      title: "Clients",
+      href: "#",
+      icon: "clients",
+    },
+    {
+      title: "Storage",
+      href: "#",
+      icon: "storage",
     },
   ],
   sidebarBottomNav: [
     {
-      title: "Search",
-      href: "#",
-      icon: "search",
-    },
-    {
-      title: "Profile",
-      href: "#",
-      icon: "user",
+      title: "Settings",
+      href: "/dashboard/settings",
+      icon: "settings",
     },
   ],
   sidebarNavItems: []
