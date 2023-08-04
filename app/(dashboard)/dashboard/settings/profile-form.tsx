@@ -180,7 +180,7 @@ export function ProfileForm( { session } : { session: Session | any } ) {
                     <FormItem>
                       <FormLabel>Full Name</FormLabel>
                       <FormControl>
-                        <Input placeholder={fullname} {...field} />
+                        <Input placeholder="Full Name" {...field} />
                       </FormControl>
                       <FormDescription>
                         This is your public full name. It is recommended that you use

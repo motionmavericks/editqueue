@@ -49,7 +49,7 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
       <SidebarNav items={sidebarNavItems} /> 
       <div className="flex h-[100vh] w-full flex-col">
       <SiteHeader />
-        <div className="space-y-6 p-10 pb-16 h-full overflow-y-auto">
+        <div className="h-full space-y-6 overflow-y-auto p-10 pb-16">
         <div className="space-y-0.5">
         </div>
         

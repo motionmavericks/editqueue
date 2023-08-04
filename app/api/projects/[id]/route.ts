@@ -3,7 +3,7 @@ import { randomUUID } from "crypto"
 import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 
-import type { Database } from '@/app/database.types'
+import type { Database } from '@/config/database.types'
 
 export async function PUT(request: Request, {params}: {params: {id: any}}){
   const {project_id, title, description} = await request.json()

@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 
 export default function IndexPage() {
   return (
-    <div className="flex flex-col h-[100vh] w-full">
+    <div className="flex h-[100vh] w-full flex-col">
     <SiteHeader />
     <section className="container grid h-full items-center gap-6 pb-8 pt-6 md:py-10">
       <div className="flex max-w-[980px] flex-col items-start gap-2">

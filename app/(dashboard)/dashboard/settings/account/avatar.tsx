@@ -112,8 +112,8 @@ export default function Avatar({
     <div className="col-span-full flex items-center gap-x-8">
       <div className={`w-${size}px h-${size}px`} style={{ minWidth: size, minHeight: size }}>
         {loading ? (
-          <div className={`relative w-${size} h-${size} `} style={{ minWidth: size, minHeight: size }}>
-            <div className="absolute inset-0 flex justify-center items-center border border-zinc-600 rounded-lg">
+          <div className={`w- relative${size} h-${size} `} style={{ minWidth: size, minHeight: size }}>
+            <div className="absolute inset-0 flex items-center justify-center rounded-lg border border-zinc-600">
               <LoadingSpinner size="10" />
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Avatar({
               height={size}
               src={avatarUrl}
               alt="Avatar"
-              className="avatar image border border-zinc-600 rounded-lg"
+              className="avatar image rounded-lg border border-zinc-600"
               style={{ height: size, width: size }}
             />
           ) : (

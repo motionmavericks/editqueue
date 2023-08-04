@@ -29,7 +29,7 @@ export function DashboardSidebarNav({ items, bottomitems }: DashboardNavProps) {
   }
 
   return (
-    <div className="bg-body h-[100vh] border-scale-500 flex w-14 flex-col justify-between border-r p-2">
+    <div className="bg-body border-scale-500 flex h-[100vh] w-14 flex-col justify-between border-r p-2">
       <TooltipProvider>
       <ul className="flex flex-col space-y-2">
         
