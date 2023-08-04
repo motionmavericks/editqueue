@@ -1,9 +1,10 @@
 
+
 import { Metadata } from "next"
 import Image from "next/image"
 
 import { Separator } from "@/components/ui/separator"
-import { SidebarNav } from "@/app/(dashboard)/dashboard/settings/components/sidebar-nav"
+import { SidebarNav } from "./components/sidebar-nav"
 import { SiteHeader } from "../components/site-header"
 import LoadingFullFrame from "../components/LoadingFullFrame"
 import { Suspense } from "react"
@@ -17,12 +18,12 @@ export const metadata: Metadata = {
 
 const sidebarNavItems = [
   {
-    title: "Profile",
-    href: "/dashboard/settings",
+    title: "All Projects",
+    href: "/dashboard/projects",
   },
   {
-    title: "Notifications",
-    href: "/dashboard/settings/notifications",
+    title: "Create Project",
+    href: "/dashboard/settings/projects/new",
   },
 
 ]
@@ -43,10 +44,7 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
         </div>
         
         <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-          <aside className="-mx-4 lg:w-1/5">
-            
-          </aside>
-          <div className="flex-1 lg:max-w-2xl">{children}</div>
+          <div className="flex-1">{children}</div>
         </div>
         </div>
         <Footer />

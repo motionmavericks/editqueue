@@ -26,7 +26,7 @@ export const dashboardConfig: DashboardConfig = {
     },
     {
       title: "Clients",
-      href: "#",
+      href: "/dashboard/clients",
       icon: "clients",
     },
     {

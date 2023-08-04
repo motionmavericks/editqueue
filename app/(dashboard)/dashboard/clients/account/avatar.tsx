@@ -1,8 +1,12 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import { Database } from '@/config/database.types';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { ToastAction } from "@/components/ui/toast"
+import { useToast } from "@/components/ui/use-toast"
 import Image from 'next/image';
-import LoadingSpinner from '@/app/(dashboard)/dashboard/components/LoadingSpinner';
+import LoadingSpinner from '../../components/LoadingSpinner';
+
 
 type Profiles = Database['public']['Tables']['userProfiles']['Row'];
 
@@ -12,7 +16,7 @@ export default function Avatar({
   size,
   onUpload,
 }: {
-  uid: string; 
+  uid: string;
   url: Profiles['avatar_url'];
   size: number;
   onUpload: (url: string) => void;
@@ -21,6 +25,7 @@ export default function Avatar({
   const [uploading, setUploading] = useState(false);
   const [loading, setIsLoading] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
+  const { toast } = useToast()
 
   const deletePreviousAvatar = async () => {
     try {
@@ -86,7 +91,11 @@ export default function Avatar({
 
       onUpload(filePath);
     } catch (error) {
-      console.log((error as Error).message || 'Error uploading avatar!');
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: "There was a problem uploading your avatar. Please try again.",
+      })
     } finally {
       setUploading(false);
       setIsLoading(false);

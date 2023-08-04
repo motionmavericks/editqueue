@@ -11,11 +11,6 @@ import { ThemeSupa } from '@supabase/auth-ui-shared'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { Database } from '@/config/database.types'
 
-export const metadata: Metadata = {
-  title: "Authentication",
-  description: "Authentication forms built using the components.",
-}
-
 export default function AuthenticationPage() {
   const supabase = createClientComponentClient<Database>()
   return (
